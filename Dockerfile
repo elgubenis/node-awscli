@@ -13,6 +13,9 @@ RUN apk add --no-cache \
   pip install --upgrade awscli s3cmd && \
   mkdir /root/.aws
 
+RUN npm set progress=false && \
+  npm install -g --progress=false yarn
+
 VOLUME ["/app"]
 WORKDIR /app
 
