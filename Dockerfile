@@ -9,6 +9,7 @@ RUN apk add --no-cache \
   groff \
   python \
   nodejs \
+  openssh-client \
   py-pip && \
   pip install --upgrade awscli s3cmd && \
   mkdir /root/.aws
