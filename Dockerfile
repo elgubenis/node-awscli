@@ -9,7 +9,8 @@ RUN apk add --no-cache \
   nodejs \
   openssh-client \
   py-pip && \
-  pip install --upgrade awscli
+  pip install --upgrade awscli \
+  mkdir /root/.aws
 
 # Set up the command arguments.
 ENTRYPOINT ["bash"]
