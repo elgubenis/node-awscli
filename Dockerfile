@@ -1,24 +1,15 @@
 FROM alpine:3.4
-MAINTAINER Daniil Pokrovsky
+MAINTAINER Daniil Pokrovsky (Linus Gubenis)
 
 RUN apk add --no-cache \
   bash \
   curl \
-  less \
   git \
-  groff \
   python \
   nodejs \
   openssh-client \
   py-pip && \
-  pip install --upgrade awscli s3cmd && \
-  mkdir /root/.aws
-
-RUN npm set progress=false && \
-  npm install -g --progress=false yarn
-
-VOLUME ["/app"]
-WORKDIR /app
+  pip install --upgrade awscli
 
 # Set up the command arguments.
 ENTRYPOINT ["bash"]
