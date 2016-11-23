@@ -1,5 +1,5 @@
 FROM alpine:3.4
-MAINTAINER Daniil Pokrovsky (Linus Gubenis)
+MAINTAINER Linus Gubenis
 
 RUN apk add --no-cache \
   bash \
@@ -9,8 +9,6 @@ RUN apk add --no-cache \
   nodejs \
   openssh-client \
   py-pip && \
-  pip install --upgrade awscli && \
-  mkdir /root/.aws
+  pip install --upgrade awscli &&
 
-# Set up the command arguments.
 ENTRYPOINT ["bash"]
