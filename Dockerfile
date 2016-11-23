@@ -9,6 +9,6 @@ RUN apk add --no-cache \
   nodejs \
   openssh-client \
   py-pip && \
-  pip install --upgrade awscli &&
+  pip install --upgrade awscli
 
 ENTRYPOINT ["bash"]
