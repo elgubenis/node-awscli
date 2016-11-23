@@ -9,6 +9,7 @@ RUN apk add --no-cache \
   nodejs \
   openssh-client \
   py-pip && \
-  pip install --upgrade awscli
+  pip install --upgrade awscli && \
+  npm install -g serverless@0.5
 
 ENTRYPOINT ["bash"]
